@@ -1,0 +1,20 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fir = 0;
+      let sec = 1;
+      let trd = 1;
+
+      let counter = 5;
+      for (let i = 4; i <= counter; i = i + 1) {
+        fir = sec;
+        sec = trd;
+        trd = fir + sec;
+      }
+      alert(counter + "th fibonacci number is " + trd);
+    </script>
+  </body>
+</html>

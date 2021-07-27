@@ -1,0 +1,14 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let func = function () {
+        var dom = document.getElementById("head");
+        dom.textContent = "Don't touch my head";
+      };
+    </script>
+    <h1 id="head" onclick="func()">this is head</h1>
+  </body>
+</html>

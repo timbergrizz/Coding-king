@@ -1,0 +1,42 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="fir" />
+    <select id="oper">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input type="text" id="sec" />
+    <input type="button" value="=" onclick="calc()" />
+    <p id="result"></p>
+    <script>
+      let calc = function () {
+        // HTML로 입력된 수 가져오고, 데이터타입을 수로 변환
+        let fir = document.getElementById("fir").value언;
+        fir = parseInt(fir);
+        let sec = document.getElementById("sec").value;
+        sec = parseInt(sec);
+
+        //우리가 선택한 연산자 가져오기
+        let oper = document.getElementById("oper").value;
+
+        //결과값 저장할 변수 선언
+        let result = 0;
+
+        // 우리가 입력받은 연산자는 실제 연산자가 아님, 문자열에 대한 문장임
+        // 그렇기 때문에 조건문을 이용해 우리가 선택한 연산자에 맞는 연산을 수행.
+        if (oper === "+") result = fir + sec;
+        else if (oper === "-") result = fir - sec;
+        else if (oper === "*") result = fir * sec;
+        else if (oper === "/") result = fir / sec;
+
+        //결과값 출력
+        document.getElementById("result").textContent = result;
+      };
+    </script>
+  </body>
+</html>

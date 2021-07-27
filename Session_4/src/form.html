@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>글 생성</h1>
+    <form action="/create" method="post">
+      <p>제목 : <input type="text" name="filename" /></p>
+      <p>내용 : <input type="text" name="content" /></p>
+      <input type="submit" value="전송" />
+    </form>
+    <h1>글 수정</h1>
+    <form action="/update" method="post">
+      <p>기존 제목 : <input type="text" name="pre_file" /></p>
+      <p>새 제목 : <input type="text" name="new_file" /></p>
+      <p>내용 : <input type="text" name="content" /></p>
+      <input type="submit" value="전송" />
+    </form>
+    <h1>글 삭제</h1>
+    <form action="/delete" method="post">
+      <p>
+        <input type="text" name="filename" />
+        <input type="submit" value="전송" />
+      </p>
+    </form>
+  </body>
+</html>
